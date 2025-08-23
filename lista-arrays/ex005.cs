@@ -1,41 +1,55 @@
 using System;
+using MinhaBiblioteca;
 
 class ex005
 {
-    /*Escreva um programa que leia ou gere um vetor de N elementos inteiros (N deve ser informado pelo 
-usuário) e passe o mesmo como parâmetro para uma função que retorne a soma de seus elementos. */
-
-    //função que pega um vetor e retorna a soma
-    static int somaVetor(int[] vet)
+    static void dnacomp(char[] vet, char[] vetComplementar) //A=T C=G
     {
-        int soma = 0;
-
         for (int i = 0; i < vet.Length; i++)
         {
-            soma = soma + vet[i];
+            if (vet[i] == 'A')
+            {
+                vetComplementar[i] = 'T';
+            }
+            else if (vet[i] == 'T')
+            {
+                vetComplementar[i] = 'A';
+            }
+            else if (vet[i] == 'C')
+            {
+                vetComplementar[i] = 'G';
+            }
+            else if (vet[i] == 'G')
+            {
+                vetComplementar[i] = 'C';
+            }
         }
-        return soma;
     }
-
-    //função principal: cria um vetor
     static void Main()
     {
-        int n, soma;
-
-        Console.WriteLine("Digite o tamanho do vetor: ");
+        int n;
+        Console.WriteLine("Qual será o tamanho do vetor (max: 50) ?");
         n = int.Parse(Console.ReadLine());
 
-        int[] vvetor = new int[n];
-
-        for (int i = 0; i < vvetor.Length; i++)
+        while (n > 50)
         {
-            Console.Write("Digite o elemento " + i + "do vetor");
-            vvetor[i] = int.Parse(Console.ReadLine());
+            Console.WriteLine("Insira um número válido (max: 50): ");
+            n = int.Parse(Console.ReadLine());
         }
 
-        soma = somaVetor(vvetor);
+        char[] dna = new char[n];
+        char[] dnaComplementar = new char[n];
 
-        Console.WriteLine($"O resultado da soma dos elementos do vetor é: {soma}");
+        Biblioteca.LerVetorCh(dna);
+        dnacomp(dna, dnaComplementar);
+
+        
+        Console.Write("Vetor complementar gerado: ");
+        Biblioteca.MostrarVetorCh(dnaComplementar);
+
+
+
+
+
     }
-
 }

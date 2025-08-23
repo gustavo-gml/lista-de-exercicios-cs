@@ -25,6 +25,16 @@ namespace MinhaBiblioteca
             }
         }
 
+        public static void LerVetorCh(char[] vet)
+        {
+            Console.WriteLine("Digite os elementos do vetor:");
+            for (int i = 0; i < vet.Length; i++)
+            {
+                Console.Write($"Elemento #{i}: ");
+                vet[i] = char.Parse(Console.ReadLine());
+            }
+        }
+
         public static void RandomVet(int[] vet)
         {
             Random aleatorio = new Random();
@@ -41,6 +51,14 @@ namespace MinhaBiblioteca
             for (int i = 0; i < vet.Length; i++)
             {
                 Console.WriteLine($"Elemento #{i}: {vet[i]}");
+            }
+        }
+
+        public static void MostrarVetorCh(Char[] vet)
+        {
+            for (int i = 0; i < vet.Length; i++)
+            {
+                Console.Write($"[{vet[i]}]");
             }
         }
     
