@@ -1,4 +1,5 @@
 using System;
+using MinhaBiblioteca;
 class ex002
 {
     static int imparQuant(int[] vet)
@@ -23,11 +24,7 @@ class ex002
 
         int[] vet = new int[n];
 
-        for (int i = 0; i < vet.Length; i++)
-        {
-            Console.Write($"Digite o elemento #{i}: ");
-            vet[i] = int.Parse(Console.ReadLine());
-        }
+        Biblioteca.LerVetor(vet);
 
         impar = imparQuant(vet);
 

@@ -1,4 +1,5 @@
 using System;
+using MinhaBiblioteca;
 
 class ex003
 {
@@ -32,11 +33,7 @@ class ex003
 
         double[] vetMenor = new double[n];
 
-        for (int i = 0; i < vetMenor.Length; i++)
-        {
-            Console.Write($"Digite o elemento #{i}: ");
-            vetMenor[i] = double.Parse(Console.ReadLine());
-        }
+        Biblioteca.LerVetorDb(vetMenor);
 
         menor = menorVet(vetMenor);
 

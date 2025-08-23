@@ -1,16 +1,8 @@
 ﻿using System;
+using MinhaBiblioteca;
 
 class ex001
 {
-    static void lerVetor(int[] vet)
-    {
-        Console.WriteLine("Digite os elementos do vetor:");
-        for (int i = 0; i < vet.Length; i++)
-        {
-            Console.Write($"Elemento #{i}: ");
-            vet[i] = int.Parse(Console.ReadLine());
-        }
-    }
     static int somaVet(int[] vet)
     {
         int soma = 0;
@@ -28,7 +20,8 @@ class ex001
         n = int.Parse(Console.ReadLine()); //pergunta ao usuário o tamanho do vetor
 
         int[] vet = new int[n];
-        lerVetor(vet); //usa a função lerVet para preencher o vetor
+        Biblioteca.LerVetor(vet); //usa a função lerVet para preencher o vetor
+        //Biblioteca.RandomVet(vet); //poderia ser usado para testes mais rápidos
 
         resultado = somaVet(vet); //usa a função somaVet para percorrer e somar os elementos do vetor
 
