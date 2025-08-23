@@ -8,7 +8,7 @@ Armazenar e organizar as atividades práticas desenvolvidas ao longo da discipli
 
 ## Estrutura
 
-- Cada exercício está em seu respectivo arquivo ou pasta, conforme orientação do professor.
+- A resolução dos exercícios se encontram todos na mesma pasta, juntamente a um pdf com os desafios.
 - Os códigos e soluções seguem as boas práticas recomendadas em sala de aula.
 
 ## Observações
