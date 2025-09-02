@@ -6,7 +6,7 @@
     <RootNamespace>lista_arrays</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>ex005</StartupObject>
+    <StartupObject>ex006</StartupObject>
   </PropertyGroup>
 
 </Project>
