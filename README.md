@@ -13,4 +13,4 @@ Armazenar e organizar as atividades práticas desenvolvidas ao longo da discipli
 
 ## Observações
 
-Este repositório é de uso acadêmico e serve como apoio ao desenvolvimento das habilidades em programação.
+Este repositório é de uso acadêmico e serve como apoio ao desenvolvimento de minhas habilidades em programação.
