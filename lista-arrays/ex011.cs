@@ -30,8 +30,8 @@ class ex011
         decodificado[j] = decodificacao[mensagemCod.Length - 1]; /*A ultima posição da string sempre será uma letra que precisa ser incluida*/
         decodificado[0] = char.ToUpper(decodificado[0]);
         
-        char[] decodificadoTotal = decodificado[..(j+1)]; /*Cria um novo vetor sem espaços vazios, j carrega o tamanho "real" da string decodificada (j+1 ocorre devido aos parametros do slicing)*/
-        string mensagemDec = new string(decodificadoTotal); /*Transforma o vetor de decodificação em uma nova string*/
+        decodificado = decodificado[..(j+1)]; /*Modifica o vetor para que fique sem espaços vazios, j carrega o tamanho "real" da string decodificada (j+1 ocorre devido aos parametros do slicing)*/
+        string mensagemDec = new string(decodificado); /*Transforma o vetor de decodificação em uma nova string*/
         return mensagemDec;
     }
     static void Main()
